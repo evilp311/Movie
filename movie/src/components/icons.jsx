@@ -1,0 +1,11 @@
+
+const ArrowRight = ({ className = "w-5 h-5 pt-1", fill = "currentColor" }) => (
+
+<svg className={className} viewBox="0 0 24 24"fill={fill} xmlns="http://www.w3.org/2000/svg">
+<path d="M14.4297 5.93005L20.4997 12.0001L14.4297 18.0701" stroke="#8E95A9" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.5 12H20.33" stroke="#8E95A9" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+);
+
+export default ArrowRight;
