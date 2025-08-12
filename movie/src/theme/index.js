@@ -3,7 +3,7 @@ import { createTheme } from 'flowbite-react'
 export default createTheme({
   navbar: {
     root: {
-      base: `bg-[url('/img/Background.svg')] min-h-screen bg-cover bg-center bg-no-repeat `
+      base: `bg-[url('/img/Background.svg')] bg-no-repeat bg-[#120F31] p-4   `
     }
   }
 })
