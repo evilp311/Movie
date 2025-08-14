@@ -4,13 +4,24 @@ import {createBrowserRouter, RouterProvider,} from "react-router";
 import './style/index.css'
 import Home from './components/Home';
 import Root from './routes/root';
-
+import Genre ,{genreMovie} from './routes/genre';
+import ErrorPage from './routes/errorPage';
 
 let router=createBrowserRouter([
 
     {
       path:'/',
       Component:Root,
+      errorElement:<ErrorPage/>,
+      children:[
+          {
+            path:'g',
+            Component:Genre,
+            loader:genreMovie,
+           
+
+          }
+      ]
     
     }
 

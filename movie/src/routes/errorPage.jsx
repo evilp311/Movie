@@ -8,8 +8,8 @@ export default function ErrorPage(){
         <>
         <NavBarError/>
         <div className="bg-[url('/img/Background.svg')] bg-[#120F31] min-h-screen bg-cover bg-center bg-no-repeat" >
-            <div className=" text-center"> 
-                <div className="">
+            <div className=" text-center "> 
+                <div className="pt-10">
                     <img src="../img/error-img.svg" className="inline-block rounded-3xl w-[400px] h-[320px]" alt="" />
                 </div>
                 <div className="mt-10 ">

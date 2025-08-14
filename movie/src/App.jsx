@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar"
 import SearchBar from "./components/SearchBar"
-
+import { Outlet } from "react-router"
 function App() {
 
   return (
@@ -12,6 +12,7 @@ function App() {
           <SearchBar/>
         </main>
         
+        <Outlet/>
 
     </div>
     </>
