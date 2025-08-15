@@ -10,7 +10,7 @@ export async function genreMovie() {
   return {genres}
 }
 
-export default function Genre(){
+export default function TabsGenre(){
   
    const {genres}=useLoaderData()
     return(
@@ -24,7 +24,7 @@ export default function Genre(){
                                     {({isActive})=>{
                                         return(
                                           
-                                            <Button  className={"text-[#8E95A9] m-1.5 bg-[#0a1b2b] cursor-pointer " + (isActive&&'bg-[#7B6EF6]')}>
+                                            <Button  className={"text-[#ffff] m-1.5 bg-[#0a1b2b] cursor-pointer hover:bg-[#7B6EF6] " + (isActive&&'bg-[#7B6EF6]')}>
                                                 {movie}
                                            </Button>
                                         )
@@ -38,7 +38,7 @@ export default function Genre(){
                 </div>
             )}
 
-            <Outlet/>
+            
         </>
     )
 }

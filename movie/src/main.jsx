@@ -2,10 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import {createBrowserRouter, RouterProvider,} from "react-router";
 import './style/index.css'
-import Home from './components/Home';
 import Root from './routes/root';
-import Genre ,{genreMovie} from './routes/genre';
+import{genreMovie}from './components/TabsGenre'
 import ErrorPage from './routes/errorPage';
+import movieByGenre,{movieByGenreLoader} from './routes/movieByGenre';
 
 let router=createBrowserRouter([
 
@@ -13,12 +13,13 @@ let router=createBrowserRouter([
       path:'/',
       Component:Root,
       errorElement:<ErrorPage/>,
+      loader:genreMovie,
       children:[
           {
-            path:'g',
-            Component:Genre,
-            loader:genreMovie,
-           
+            path:':genre',
+            Component:movieByGenre,
+            loader:movieByGenreLoader,
+  
 
           }
       ]
