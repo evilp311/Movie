@@ -12,7 +12,7 @@ function App() {
           <SearchBar/>
         </main>
         <TabsGenre/>
-        <Outlet/>
+        
 
     </div>
     </>

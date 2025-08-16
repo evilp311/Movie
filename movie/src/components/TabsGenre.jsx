@@ -16,7 +16,7 @@ export default function TabsGenre(){
     return(
         <>
             { genres &&(
-                <div className=" flex flex-wrap  bg-[#0a1b2b] rounded-xl p-2 mt-[88px]  mx-[150px] ">
+                <div className=" flex flex-wrap  bg-[#0a1b2b] rounded-xl p-2 mt-[88px]  w-[1400px] ml-[140px] ">
                     {genres.map((movie,movieIndex)=>{
                         return(
                             
@@ -37,7 +37,7 @@ export default function TabsGenre(){
                     })}
                 </div>
             )}
-
+        <Outlet/>
             
         </>
     )

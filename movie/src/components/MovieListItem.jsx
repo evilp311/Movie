@@ -2,6 +2,7 @@ import { Card } from "flowbite-react";
 import Star from "../utils/star";
 import { Link } from "react-router";
 export default function MovieListItem({name,id,image,rating}){
+  
     return(
 
       <Link to={`/movie/${id}`} className="w-[282px] mb-5">

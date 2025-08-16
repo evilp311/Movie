@@ -8,10 +8,11 @@ export default async function getMovieByGenre (genre = '') {
     `https://moviesapi.codingfront.dev/api/v1/genres/${genre}/movies`
   )
 
-  return res.data.data.map(({ id, title, poster, imdb_rating }) => ({
+  return res.data.data.map(({ id, title, poster, imdb_rating, genres }) => ({
     id: id,
     name: title,
     img: poster,
-    rating: imdb_rating
+    rating: imdb_rating,
+    genres: genres
   }))
 }

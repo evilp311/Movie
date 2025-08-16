@@ -5,8 +5,8 @@ import './style/index.css'
 import Root from './routes/root';
 import{genreMovie}from './components/TabsGenre'
 import ErrorPage from './routes/errorPage';
-import movieByGenre,{movieByGenreLoader} from './routes/movieByGenre';
-
+import movieByGenre from './routes/movieByGenre';
+import {movieByGenreLoader} from'./components/MovieList'
 let router=createBrowserRouter([
 
     {
