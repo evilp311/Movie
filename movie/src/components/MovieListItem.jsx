@@ -5,7 +5,7 @@ export default function MovieListItem({name,id,image,rating}){
   
     return(
 
-      <Link to={`/movie/${id}`} className="w-[282px] mb-5">
+      <Link to={`/movie/${id}`} className="max-w-[282px] mb-5">
         <Card
           className=" relative" applyTheme={{root:{base:'replace'}}}
           renderImage={() =><img src={image} className="rounded-[8px]"/>}

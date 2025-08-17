@@ -1,17 +1,24 @@
 import NavBar from "./components/NavBar"
 import SearchBar from "./components/SearchBar"
 import TabsGenre from "./components/TabsGenre"
-import { Outlet } from "react-router"
+import { Outlet, useNavigation } from "react-router"
+import SkeletonLoading from "./components/SkeletonLoading"
+
 function App() {
+  const navigation=useNavigation()
+  const isLoading=navigation.location
+  console.log(isLoading)
+
 
   return (
     <>
     <NavBar/>
-    <div className="bg-[url('/img/Background.svg')] bg-[#120F31] h-[100%] bg-cover  " >
-        <main>
+    <div className="bg-[url('/img/Background.svg')] bg-[#120F31] min-h-screen bg-cover  " >
+        <main className=" ">
           <SearchBar/>
+           <TabsGenre/>
         </main>
-        <TabsGenre/>
+       
         
 
     </div>

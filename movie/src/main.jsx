@@ -7,6 +7,7 @@ import{genreMovie}from './components/TabsGenre'
 import ErrorPage from './routes/errorPage';
 import movieByGenre from './routes/movieByGenre';
 import {movieByGenreLoader} from'./components/MovieList'
+import SkeletonLoadingList from './components/SkeletoLoadingList';
 let router=createBrowserRouter([
 
     {
@@ -15,6 +16,11 @@ let router=createBrowserRouter([
       errorElement:<ErrorPage/>,
       loader:genreMovie,
       children:[
+        {
+          index:true,
+          Component:SkeletonLoadingList,
+        },
+
           {
             path:':genre',
             Component:movieByGenre,

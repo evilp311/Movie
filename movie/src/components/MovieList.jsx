@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import { useLoaderData } from "react-router";
 import getMovieByGenre from'../api/getMovieByGenre'
+import SkeletonLoading from "./SkeletonLoading";
 
 
 
@@ -59,7 +60,7 @@ export default function MovieList(){
              dataLength={movies.length}
              next={getData}
              hasMore={hasMore}
-             loader={page<=10 && <p>loading...</p>}
+             loader={<SkeletonLoading/>}
              endMessage={
                 <p className="text-center text-red-700">
                     <b>you have seen it all</b>
