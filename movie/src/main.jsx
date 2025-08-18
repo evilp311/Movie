@@ -8,6 +8,7 @@ import ErrorPage from './routes/errorPage';
 import movieByGenre from './routes/movieByGenre';
 import {movieByGenreLoader} from'./components/MovieList'
 import SkeletonLoadingList from './components/SkeletoLoadingList';
+import moviePage, { movieLoader } from './routes/moviePage';
 let router=createBrowserRouter([
 
     {
@@ -27,11 +28,20 @@ let router=createBrowserRouter([
             loader:movieByGenreLoader,
   
 
-          }
+          },
+         
       ]
+      
     
+    },
+    {
+       
+            path:'movie/:id',
+            errorElement:<ErrorPage/>,
+            Component:moviePage,
+            loader:movieLoader,
+          
     }
-
 
 ])
 

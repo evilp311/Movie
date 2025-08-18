@@ -2,7 +2,7 @@ import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "f
 import ArrowRight from '../utils/icons'
 export default function NavBar (){
     return(
-    <Navbar className="" >
+    <Navbar className="bg-[url('/img/Background.svg')] bg-no-repeat bg-[#120F31] p-4" >
       <NavbarBrand >
         <img src="/img/logo.svg" className="mr-3 h-10 w-10  " alt="App-logo" />
       </NavbarBrand>
