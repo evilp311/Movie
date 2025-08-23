@@ -9,6 +9,7 @@ import movieByGenre from './routes/movieByGenre';
 import {movieByGenreLoader} from'./components/MovieList'
 import SkeletonLoadingList from './components/SkeletoLoadingList';
 import moviePage, { movieLoader } from './routes/moviePage';
+import moviePageBySearch,{movieByNameLoader} from './routes/moviePageBySearch';
 let router=createBrowserRouter([
 
     {
@@ -41,6 +42,12 @@ let router=createBrowserRouter([
             Component:moviePage,
             loader:movieLoader,
           
+    },
+    {
+            path:'search/:name',
+            errorElement:<ErrorPage/>,
+            Component:moviePageBySearch,
+            loader:movieByNameLoader,
     }
 
 ])

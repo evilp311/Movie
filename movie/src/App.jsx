@@ -5,9 +5,7 @@ import { Outlet, useNavigation } from "react-router"
 import SkeletonLoading from "./components/SkeletonLoading"
 
 function App() {
-  const navigation=useNavigation()
-  const isLoading=navigation.location
-  console.log(isLoading)
+  
 
 
   return (
