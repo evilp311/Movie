@@ -12,15 +12,14 @@ export async function movieByNameLoader({params}){
 
 export default function moviePageBySearch(){
     const{movie}=useLoaderData();
-    console.log(movie)
+    console.log( movie)
     return(
         <>
             <NavBar/>
             <div className="bg-[url('/img/Background.svg')] bg-[#120F31] min-h-screen bg-cover">
-            {movie.length===0&&(
-                <NotFoundMovie/>
-            )}
-            {!movie.length===0&&(<Movie movie={movie}/>)}
+            {movie.length===0?<NotFoundMovie/>:<Movie movie={movie}/>}
+            
+            
             </div>
         </>
     )
