@@ -4,6 +4,8 @@ import { getMovieBySearchName } from "../api/getMovieBySearchName";
 import Movie from "../components/Movie";
 import ErrorPage from "./errorPage";
 import NotFoundMovie from "../components/NotFoundMovie";
+import { useEffect } from "react";
+
 export async function movieByNameLoader({params}){
     const movie= await getMovieBySearchName(params.name)
     return{movie}
@@ -12,7 +14,10 @@ export async function movieByNameLoader({params}){
 
 export default function moviePageBySearch(){
     const{movie}=useLoaderData();
-    console.log( movie)
+      useEffect(()=>{
+            window.scrollTo(0,0);
+        },[])
+    
     return(
         <>
             <NavBar/>
