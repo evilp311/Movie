@@ -2,7 +2,6 @@ import NavBar from "../components/NavBar";
 import { useLoaderData } from "react-router";
 import { getMovieBySearchName } from "../api/getMovieBySearchName";
 import Movie from "../components/Movie";
-import ErrorPage from "./errorPage";
 import NotFoundMovie from "../components/NotFoundMovie";
 import { useEffect } from "react";
 

@@ -5,7 +5,8 @@ import axios from "axios";
 import { useLoaderData } from "react-router";
 import getMovieByGenre from'../api/getMovieByGenre'
 import SkeletonLoading from "./SkeletonLoading";
-
+import BackToTop from "../utils/arrowUp";
+import { useCallback } from "react";
 
 
 export async function movieByGenreLoader({params}){
@@ -27,6 +28,12 @@ export default function MovieList(){
         setHasMore(true)
     }, [genre, movie])
 
+    const scrolltoTop=useCallback(()=>{
+        window.scrollTo({
+            top:0,
+            behavior:"smooth",
+        })
+    },[])
 
     const getData=()=>{
         if (!hasMore) return;
@@ -62,9 +69,13 @@ export default function MovieList(){
              hasMore={hasMore}
              loader={<SkeletonLoading/>}
              endMessage={
-                <p className="text-center text-red-700">
-                    <b>you have seen it all</b>
-                </p>
+                <div className=" flex gap-2 justify-center items-center text-[#7B6EF6]  text-2xl cursor-pointer " onClick={()=>{scrolltoTop()}}>
+                  <button>
+                    Back To Top 
+                 </button>
+                 <BackToTop/>
+                </div>
+               
              }
             >
                

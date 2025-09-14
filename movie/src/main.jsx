@@ -7,7 +7,7 @@ import{genreMovie}from './components/TabsGenre'
 import ErrorPage from './routes/errorPage';
 import movieByGenre from './routes/movieByGenre';
 import {movieByGenreLoader} from'./components/MovieList'
-import SkeletonLoadingList from './components/SkeletoLoadingList';
+import Random4Movie,{Loader4RandomMovie}  from './components/Random4Movie';
 import moviePage, { movieLoader } from './routes/moviePage';
 import moviePageBySearch,{movieByNameLoader} from './routes/moviePageBySearch';
 let router=createBrowserRouter([
@@ -20,12 +20,15 @@ let router=createBrowserRouter([
       children:[
         {
           index:true,
-          Component:SkeletonLoadingList,
+          Component:Random4Movie,
+          errorElement:<ErrorPage/>,
+          loader:Loader4RandomMovie, 
         },
 
           {
             path:':genre',
             Component:movieByGenre,
+            errorElement:<ErrorPage/>,
             loader:movieByGenreLoader,
   
 

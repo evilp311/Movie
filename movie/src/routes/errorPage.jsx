@@ -1,9 +1,8 @@
 import { useRouteError } from "react-router"
 import NavBarError from "../components/NavBarError"
-import { Button } from "flowbite-react";
+import { Link } from "react-router"
 export default function ErrorPage(){
-    const e=useRouteError()
-    console.log(e)
+    const error=useRouteError()
     return(
         <>
         <NavBarError/>
@@ -17,11 +16,14 @@ export default function ErrorPage(){
                            Lost your way?
                          </h5>
                          <p className="font-[Popins] text-[16px] text-[#8E95A9] mt-[18px] mb-6 ">
-                            {e.error.message}                       
+                            {error.message}                       
                          </p>
-                         <button className="w-[139px] h-[56px] text-[#FFFFFF] bg-[#7B6EF6] cursor-pointer hover:bg-[#5a53a0] rounded-xl border-2 border-[#7B6EF6] py-4 px-8  ">
-                            Go Home
-                         </button>
+                        <Link to={'/'}>
+                             <button className="w-[139px] h-[56px] text-[#FFFFFF] bg-[#7B6EF6] cursor-pointer hover:bg-[#5a53a0] rounded-xl border-2 border-[#7B6EF6] py-4 px-8  ">
+                               Go Home
+                             </button>
+                        </Link>
+                        
                 </div>
             </div>
         </div>

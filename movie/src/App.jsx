@@ -16,9 +16,6 @@ function App() {
           <SearchBar/>
            <TabsGenre/>
         </main>
-       
-        
-
     </div>
     </>
     
