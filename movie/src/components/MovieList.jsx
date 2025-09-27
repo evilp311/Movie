@@ -63,7 +63,7 @@ export default function MovieList(){
    
     return(
        
-            <InfiniteScroll className="grid grid-cols-4  w-[1500px]"
+            <InfiniteScroll className="grid grid-cols-4  w-[1210px] m-auto  mt-[88px] "
              dataLength={movies.length}
              next={getData}
              hasMore={hasMore}

@@ -11,8 +11,8 @@ function App() {
   return (
     <>
     <NavBar/>
-    <div className="bg-[url('/img/Background.svg')] bg-[#120F31] min-h-screen bg-cover  " >
-        <main className=" ">
+    <div className=" relative bg-[url('/img/Background.svg')] bg-[#120F31]  bg-cover bg-center    " >
+        <main className="   ">
           <SearchBar/>
            <TabsGenre/>
         </main>

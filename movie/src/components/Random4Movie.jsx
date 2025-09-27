@@ -13,7 +13,7 @@ export default function Random4Movie(){
     const navigation=useNavigation();
     const isLoading=Boolean(navigation.location)
     return(
-        <div className={`grid grid-cols-4 pl-[140px] mt-[88px] pr-[220px] pb-[120px] ${isLoading?'opacity-30 grayscale-100':''}` }>
+        <div className={`grid grid-cols-4 w-[1210px]  mt-[88px]  m-auto pb-[120px] ${isLoading?'opacity-30 grayscale-100':''}` }>
            {randomMovie&& (
             randomMovie.map((movie)=>{
                 return(

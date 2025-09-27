@@ -16,7 +16,9 @@ export default function moviePage (){
     return(
         <>
             <NavBar/>
-             <div className="bg-[url('/img/Background.svg')] bg-[#120F31] min-h-screen bg-cover">
+            
+             <div className=" relative  min-h-screen ">
+             <div className="absolute inset-0 rotate-x-180 bg-[url('/img/Background.svg')] bg-[#120F31]   bg-center bg-cover min-h-screen "></div>
                 {movie&&(<Movie movie={movie}/>)}
              </div>
         </>

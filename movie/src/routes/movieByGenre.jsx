@@ -9,7 +9,7 @@ export default function movieByGenre(){
     const isLoading=Boolean(navigation.location)
     return(
 
-        <div className={`pl-[140px] mt-[88px] ${isLoading?'opacity-30 grayscale-100':''} `}   >
+        <div className={`  ${isLoading?'opacity-30 grayscale-100':''} `}   >
              <MovieList />
         </div>
 
