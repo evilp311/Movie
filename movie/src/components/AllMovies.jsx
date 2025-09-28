@@ -3,32 +3,29 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { useState,useEffect } from "react";
 import axios from "axios";
 import { useLoaderData } from "react-router";
-import getMovieByGenre from'../api/getMovieByGenre'
 import SkeletonLoading from "./SkeletonLoading";
 import BackToTop from "../utils/arrowUp";
 import { useCallback } from "react";
 import getAllMovies from "../api/getAllMovie";
+import { useNavigation } from "react-router";
 
+export async function allMovieLoder(){
+        const allmovie=await getAllMovies()
+        return {allmovie}
 
-export async function movieByGenreLoader({params}){
-   
-    const movie=await getMovieByGenre(params.genre)
-    return{movie,genre: params.genre}
 }
 
+export default function allmovies(){
 
-
-export default function MovieList(){
-     const {movie,genre}=useLoaderData()
-     console.log(movie)
+    const {allmovie}=useLoaderData()
     const[page,setPage]=useState(2)
-    const[movies,setMovies]=useState(movie)
+    const[movies,setMovies]=useState(allmovie)
     const [hasMore, setHasMore] = useState(true)
      useEffect(() => {
-        setMovies(movie)
+        setMovies(allmovie)
         setPage(2)
         setHasMore(true)
-    }, [genre, movie])
+    }, [ allmovie])
 
     const scrolltoTop=useCallback(()=>{
         window.scrollTo({
@@ -41,7 +38,7 @@ export default function MovieList(){
         if (!hasMore) return;
      const  fetchmovie= async ()=>{
         try{
-            const res= await axios.get(`https://moviesapi.codingfront.dev/api/v1/genres/${genre}/movies?page=${page}`)
+            const res= await axios.get(`https://moviesapi.codingfront.dev/api/v1/movies?page=${page}`)
             if (res.data.data.length === 0) {
                     setHasMore(false)
                     return
@@ -63,10 +60,8 @@ export default function MovieList(){
         fetchmovie();
     }
    
- 
-
     return(
-       
+        
             <InfiniteScroll className="grid grid-cols-4  w-[1210px] m-auto  mt-[88px] "
              dataLength={movies.length}
              next={getData}
@@ -85,7 +80,7 @@ export default function MovieList(){
                
                { movies && ( movies.map((movie)=>{
                         return(
-                            <MovieListItem key={movie.id} id={movie.id} name={movie.name} image={movie.img} rating={movie.rating} genre={genre} />
+                            <MovieListItem key={movie.id} id={movie.id} name={movie.name} image={movie.img} rating={movie.rating}  />
                         )
                     })
                 
@@ -94,5 +89,6 @@ export default function MovieList(){
                
             </InfiniteScroll>
         
-         )
+        
+    )
 }

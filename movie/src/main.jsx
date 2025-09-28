@@ -10,6 +10,7 @@ import {movieByGenreLoader} from'./components/MovieList'
 import Random4Movie,{Loader4RandomMovie}  from './components/Random4Movie';
 import moviePage, { movieLoader } from './routes/moviePage';
 import moviePageBySearch,{movieByNameLoader} from './routes/moviePageBySearch';
+import allmovies ,{allMovieLoder} from './components/AllMovies';
 let router=createBrowserRouter([
 
     {
@@ -20,9 +21,10 @@ let router=createBrowserRouter([
       children:[
         {
           index:true,
-          Component:Random4Movie,
+          Component:allmovies,
           errorElement:<ErrorPage/>,
-          loader:Loader4RandomMovie, 
+          loader:allMovieLoder,
+           
         },
 
           {
@@ -33,6 +35,10 @@ let router=createBrowserRouter([
   
 
           },
+          
+             
+            
+          
          
       ]
       
