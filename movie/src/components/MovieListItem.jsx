@@ -5,9 +5,9 @@ export default function MovieListItem({name,id,image,rating}){
   
     return(
 
-      <Link to={`/movie/${id}`} className="max-w-[282px] mb-5 ">
+      <Link to={`/movie/${id}`} className="max-w-[282px] mb-5  ">
         <Card
-          className=" relative" applyTheme={{root:{base:'replace'}}}
+          className=" relative flex rounded-lg w-[282px] h-[480px] bg-[#20283ECC]  pb-4 pt-2 px-2 border-0" applyTheme={{root:{base:'replace'}}}
           renderImage={() =><img src={image} className=" z-1 rounded-[8px] max-h-[394px] min-h-[394px] "/>}
         >
           <div className=" max-w-[282px]  absolute inset-0  h-[480px] rounded-[8px]  bg-[url('/img/Background.svg')] bg-cover   "></div>

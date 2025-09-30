@@ -11,6 +11,7 @@ import Random4Movie,{Loader4RandomMovie}  from './components/Random4Movie';
 import moviePage, { movieLoader } from './routes/moviePage';
 import moviePageBySearch,{movieByNameLoader} from './routes/moviePageBySearch';
 import allmovies ,{allMovieLoder} from './components/AllMovies';
+
 let router=createBrowserRouter([
 
     {
