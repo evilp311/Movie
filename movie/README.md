@@ -24,6 +24,17 @@ MovieDB Explorer is a feature-rich web application that allows users to discover
 - **HTTP Client**: Axios/Fetch
 - **Package Manager**: npm/yarn
 
+
+## 🤝 Contributing
+This is a bootcamp project, but contributions and suggestions are welcome! Please feel free to fork this repository and submit pull requests.
+
+## 📄 License
+This project is created for educational purposes as part of Coding Bootcamp Period 29.
+
+## 👨‍💻 Author
+Your Seyed Mahdi Hosseini
+Coding Bootcamp Period 29 Student
+
 ## 🚀 Installation & Setup
 
 ### Prerequisites
@@ -58,14 +69,6 @@ npm --version
     The app should now be running locally!
 
 
-🤝 Contributing
-This is a bootcamp project, but contributions and suggestions are welcome! Please feel free to fork this repository and submit pull requests.
 
-📄 License
-This project is created for educational purposes as part of Coding Bootcamp Period 29.
-
-👨‍💻 Author
-Your Seyed Mahdi Hosseini
-Coding Bootcamp Period 29 Student
 
 
